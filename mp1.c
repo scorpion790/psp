@@ -6,17 +6,10 @@
 
 void main() {
   pid_t pid, pid_hijo;
-  pid = fork();
-  printf("jorge");
- 
-  if (pid == -1 ) 
-  {
-    printf("ERROR !!! No se ha podido crear el proceso hijo...");
-    exit(-1);       
-  }
+  pid = fork(); 
   if (pid == 0 )   
   {        
-    printf("Soy el proceso hijo ... \n");	  
+    	printf("jorge\n");  
   }
   else    
   { 
