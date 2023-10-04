@@ -1,4 +1,7 @@
-     printf("el id padre de p1 es (PID: %d) \n", getppid());
+    pid1 = getpid();
+    if ((getpid() % 2) == 0) {
+        printf("el id de p1 es (PID: %d) \n", getpid());
+        printf("el id padre de p1 es (PID: %d) \n", getppid());
     } else {
         printf("el id de p1 es (PID: %d) \n", getpid());
     }
@@ -51,9 +54,9 @@
             int status;
             waitpid(pid2, &status, 0);
             waitpid(pid3, &status, 0);     
-            printf("esperado a que P2 y P3 terminen\n", getpid());
+            printf("esperado a que P2 y P3 terminen\n");
         }
     }
 
-    return 0;
+    exit(0);
 }
